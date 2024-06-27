@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page - Manage Lost and Found Items</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Admin Page - Manage Lost and Found Items</h2>
+    <a href="form.html" class="btn btn-success mb-3">Add New Item</a>
+    <a href="index.html" class="btn btn-primary mb-3">Back to Home</a>
+    <div id="itemsContainer" class="mt-4"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const itemsContainer = document.getElementById('itemsContainer');
+
+      // Retrieve items from localStorage
+      const items = JSON.parse(localStorage.getItem('items')) || [];
+
+      if (items.length === 0) {
+        itemsContainer.innerHTML = '<p>No items found.</p>';
+        return;
+      }
+
+      // Display each item in a card format
+      items.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'card mb-3';
+
+        card.innerHTML = `
+          <div class="card-body">
+            <h5 class="card-title">Item Name: ${item.itemName}</h5>
+            <p class="card-text">Date Added: ${item.dateAdded}</p>
+            <p class="card-text">Date Lost/Found: ${item.dateLostFound}</p>
+            <p class="card-text">Category: ${item.category}</p>
+            <button class="btn btn-danger" onclick="deleteItem(${index})">Delete</button>
+          </div>
+        `;
+
+        itemsContainer.appendChild(card);
+      });
+    });
+
+    // Function to delete an item
+    function deleteItem(index) {
+      let items = JSON.parse(localStorage.getItem('items')) || [];
+      items.splice(index, 1);
+      localStorage.setItem('items', JSON.stringify(items));
+      location.reload(); // Reload the page to update the list
+    }
+  </script>
+</body>
+</html>

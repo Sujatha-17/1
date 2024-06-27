@@ -1,0 +1,50 @@
+/* styles2.css */
+
+body {
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .container {
+    max-width: 400px; /* Centered container with a maximum width */
+    background-color: #ffffff; /* White background for the login form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow effect */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Spacing below the heading */
+  }
+  
+  .form-check-label {
+    font-size: 0.9rem; /* Adjust checkbox label size */
+  }
+  
+  .btn-primary {
+    width: 100%; /* Full-width login button */
+    margin-top: 15px; /* Spacing above the button */
+  }
+  
+  #forgotPassword {
+    display: block;
+    text-align: center;
+    margin-top: 10px; /* Spacing above the 'Forgot Password?' link */
+    font-size: 0.9rem; /* Adjust link font size */
+    color: #007bff; /* Blue color for the link (Bootstrap primary color) */
+  }
+  
+  #forgotPassword:hover {
+    text-decoration: none; /* Remove underline on hover */
+  }
+  
+  img {
+    max-width: 100px; /* Limit the width of the logo image */
+    margin-bottom: 20px; /* Spacing below the logo */
+    display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto 20px; /* Centers the image horizontally and adds spacing below */
+  max-width: 100px;
+  }
+
+    /* 
+  

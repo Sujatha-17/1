@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+}
+
+nav .btn {
+  border-radius: 15px;
+}
+
+.hero img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.serch-result {
+  text-align: center;
+}
+
+.serch-result p {
+  font-weight: bold;
+}
+
+.items-section .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.items-section .card-body {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.items-section .card-title {
+  font-weight: 500;
+}
+
+.items-section .btn-primary {
+  border-radius: 20px;
+  background-color: #007bff;
+  border: none;
+  font-weight: 500;
+}
+
+.items-section .card .card-text {
+  margin: 0;
+}
+
+.items-section .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items-section .card-body .leftdiv,
+.items-section .card-body .rightdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.items-section .card-body .rightdiv .btn {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-brand {
+    margin-left: 42%;
+  }
+}
